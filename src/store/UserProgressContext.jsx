@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
 
+// this file is help to show the cart to the user when they click on the cart button and trying to make this more dynamic by using context api to manage the state of the cart and checkout components
+
 const UserProgressContext = createContext({
   progress: "",
   showCart: () => {},
