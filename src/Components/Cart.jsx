@@ -23,7 +23,7 @@ export default function Cart() {
   console.log("inside Cart component", cartCtx.items);
 
   return (
-    <Modal className="cart" open={userProgressCtx.progress === "cart"}>
+    <Modal className="cart" open={userProgressCtx.progress === "cart"} onClose={userProgressCtx.progress === "cart" ? handleCloseCart : null}>
       <h2>Your cart</h2>
       <ul>
         {cartCtx.items.map((item) => (
