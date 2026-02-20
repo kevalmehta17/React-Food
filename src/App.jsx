@@ -1,12 +1,18 @@
-import Header from "./Components/Header";
-import Meals from "./Components/Meals";
+import Cart from "./Components/Cart.jsx";
+import Header from "./Components/Header.jsx";
+import Meals from "./Components/Meals.jsx";
+import { CartContextProvider } from "./store/CartContext.jsx";
+import { UserProgressContextProvider } from "./store/UserProgressContext.jsx";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Meals />
-    </>
+    <UserProgressContextProvider>
+      <CartContextProvider>
+        <Header />
+        <Meals />
+        <Cart />
+      </CartContextProvider>
+    </UserProgressContextProvider>
   );
 }
 
